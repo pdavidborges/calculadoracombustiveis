@@ -1,0 +1,150 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+#header{
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: top center;
+    text-align: center;    
+
+    display: flex; /*inicia o flexbox*/
+    flex-direction: column;
+    justify-content: center;
+}
+
+#header h1{
+    color: #FFFFFF;
+    font-size: 48px;
+}
+
+#header h2{
+    color: #FFFFFF;
+    font-size: 32px;
+}
+
+#content{        
+    width: 95%; /*largura*/
+    max-width: 700px; /*largura máxima*/
+
+    height: auto;
+    /*margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;*/
+    /*margin: 50px auto 30px auto; top, right, bottom, left*/
+    margin: 80px auto;    
+}
+
+#content h3{
+    color: #555555;
+    font-size: 24px;
+}
+
+#content p{
+    color: #555555;
+    /*font-size: 16px;*/
+}
+
+#content form{    
+    width: 300px;   
+    color: #555555;
+}
+
+#content input{
+    width: 100%;    
+    height: 30px;
+    box-sizing: border-box; /*faz com que o padding/border não interfiram nas dimensões (largura/altura)*/
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+#content button{
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: #003366;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#content button:hover{
+    background-color: black;
+    /*transform: scale(1.1);*/
+    transform: rotate(5deg);
+}
+
+#flex-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#result{
+    width: 350px;
+    background-color: #0066CC;
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 0;    
+    display: none; /*área não será exibida ao carregar a página*/
+}
+
+#footer{
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 17px 0;
+    font-size: 14px;
+}
+
+#footer a{
+    color: #ffffff;
+}
+
+/*Para telas de até 700px*/
+@media (max-width: 700px){
+    
+    #flex-content{
+        flex-direction: column;
+    }
+
+    #content form, #content button,  #result{
+        width: 100%;
+    }          
+
+    #result{
+        margin-top: 20px;
+    }
+    
+    #header h1{
+        font-size: 32px;
+    }
+
+    #header h2{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 430px){
+    #header{
+        background-image: url(../img/background-mob.jpg);
+        height: 240px;
+    }
+
+    #content{
+        margin: 30px auto;
+    }
+
+}
